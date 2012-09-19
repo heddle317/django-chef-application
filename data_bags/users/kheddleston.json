@@ -1,0 +1,12 @@
+{ 
+    "id": "kheddleston",
+    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA8k18AC5+SNx87AIvmIGHGIiBXAE+bjGofRfS6mevtrwz738RBuWVw4kiV9W48OwWmq+IsOvET4r0xungmU9c8Xneo4jkrHQaUjXPc2/FyjzRCHSZpucNv+tZyoj8DgrqIRauQ9/Xs2jRCEmJcKNHIijG++o8EZPO/B5CaRlG2HFla6udDP/F+nl+NDrbFUSyLhpX1SvFA389PIzDOgQdS0I1OmybhHQlSWb33WJG3dL7FV51Y0ITKAb6wPyFbtxbZJwHJVVuicU2qPek5lSOlROTqWyE+srEvaOrCDU3XQPM5Nh+C/CbIPq6WuIvxzCSVDxVpBhZiD5eWwR4OBQfAQ== heddle317@Katherine-Heddlestons-MacBook-Pro.local",
+    "shadow": "$6$S3JtLg442Sm1xnAr$11lc.Sd8GzdfmADCL7XD7KP/YDNfFIf/7EBuPCO8lhDyizGdRqOQekSguaiRwbWbL.pjECvDr83.BQ6P9pJCm/",
+    "groups": ["sysadmin", "devs"],
+    "uid": 1000,
+    "shell": "\/bin\/bash",
+    "comment": "Kate Heddleston",
+    "nagios": {
+        "email": "kate.heddleston@gmail.com"
+    }
+}
