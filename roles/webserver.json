@@ -10,7 +10,8 @@
   "run_list": [
     "role[base]",
     "recipe[gunicorn]",
-    "recipe[nginx]"
+    "recipe[nginx]",
+    "recipe[django-application]"
   ],
   "env_run_lists": {
   }
