@@ -11,7 +11,8 @@
     "role[base]",
     "recipe[gunicorn]",
     "recipe[nginx]",
-    "recipe[django-application]"
+    "recipe[django-application]",
+    "recipe[postgresql]"
   ],
   "env_run_lists": {
   }
