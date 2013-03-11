@@ -1,0 +1,17 @@
+{
+  "name": "webserver",
+  "description": "The role that installs webserver recipes.",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[gunicorn]",
+    "recipe[nginx]"
+  ],
+  "env_run_lists": {
+  }
+}

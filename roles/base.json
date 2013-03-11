@@ -1,0 +1,32 @@
+{
+  "name": "base",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+      "authorization": {
+        "sudo": {
+          "groups": [
+            "sysadmin"
+          ],
+          "passwordless": false
+        }
+      }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[build-essential]",
+    "recipe[python]",
+    "recipe[git]",
+    "recipe[vim]",
+    "recipe[sudo]",
+    "recipe[htop]",
+    "recipe[timezone]",
+    "recipe[supervisor]",
+    "recipe[users::sysadmins]"
+  ],
+  "env_run_lists": {
+  }
+}
