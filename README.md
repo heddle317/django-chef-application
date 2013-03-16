@@ -40,7 +40,7 @@ Links to my Chef presentation at PyCon 2013
 ===================================
 
 * Slides - http://bit.ly/ZxZNSS
-* Video - 
+* Video - http://pyvideo.org/video/1756/chef-automating-web-application-infrastructure
 
 
 
