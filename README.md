@@ -11,20 +11,20 @@ https://learnchef.opscode.com/quickstart/workstation-setup/
 Getting Started with your knife plugin
 ======================================
 
-https://github.com/opscode/knife-rackspace
-https://github.com/opscode/knife-ec2
-https://github.com/opscode/knife-linode
-....
+* https://github.com/opscode/knife-rackspace
+* https://github.com/opscode/knife-ec2
+* https://github.com/opscode/knife-linode
+
 I'll let you google any other plugins that you might need.
 
 **As a recommendation when setting up your knife plugin - rather than putting your hosting provider credentials directly in the installed code base, add these variables to your .bash_profile like this:
 
-export RACKSPACE_USERNAME=''
-export RACKSPACE_API_KEY=''
+* export RACKSPACE_USERNAME=''
+* export RACKSPACE_API_KEY=''
 
 This way these credentials stay local and private.
 
-Change the user in the data_bag/users/ folder
+Change the user in the `data_bag/users/` folder
 =============================================
 
 I have my personal user in the users folder; you should remove this user and replace it with your own unless you want me to have access to all your boxes :)
@@ -32,15 +32,15 @@ I have my personal user in the users folder; you should remove this user and rep
 Links to particularly interesting articles I found while making this repository
 =======================
 
-http://version2beta.com/articles/dev-environments-with-vagrant-chef-and-git/
-http://devopsanywhere.blogspot.com/2011/10/puppet-vs-chef-fight.html
-http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software
+* http://version2beta.com/articles/dev-environments-with-vagrant-chef-and-git/
+* http://devopsanywhere.blogspot.com/2011/10/puppet-vs-chef-fight.html
+* http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software
 
 Links to my Chef presentation at PyCon 2013
 ===================================
 
-Slides - http://bit.ly/ZxZNSS
-Video - 
+* Slides - http://bit.ly/ZxZNSS
+* Video - 
 
 
 
