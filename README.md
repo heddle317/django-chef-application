@@ -35,6 +35,7 @@ Links to particularly interesting articles I found while making this repository
 * http://version2beta.com/articles/dev-environments-with-vagrant-chef-and-git/
 * http://devopsanywhere.blogspot.com/2011/10/puppet-vs-chef-fight.html
 * http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software
+* http://blog.afistfulofservers.net/post/2011/12/30/cfengine-puppet-and-chef-part-1/
 
 Links to my Chef presentation at PyCon 2013
 ===================================
