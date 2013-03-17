@@ -39,7 +39,7 @@ Links to particularly interesting articles I found while making this repository
 Links to my Chef presentation at PyCon 2013
 ===================================
 
-* Slides - http://bit.ly/ZxZNSS
+* Slides - http://bit.ly/WwYuVl
 * Video - http://pyvideo.org/video/1756/chef-automating-web-application-infrastructure
 
 
