@@ -18,8 +18,13 @@
 # limitations under the License.
 #
 
-python_bindir = "#{node['python']['prefix_dir']}/bin"
-pip_bindir    = "#{node['python']['pip']['prefix_dir']}/bin"
+if platform_family?("rhel") and node['python']['install_method'] == 'package'
+  pip_binary = "/usr/bin/pip"
+elsif platform_family?("smartos")
+  pip_binary = "/opt/local/bin/pip"
+else
+  pip_binary = "/usr/local/bin/pip"
+end
 
 # Ubuntu's python-setuptools, python-pip and python-virtualenv packages
 # are broken...this feels like Rubygems!
@@ -28,14 +33,14 @@ pip_bindir    = "#{node['python']['pip']['prefix_dir']}/bin"
 remote_file "#{Chef::Config[:file_cache_path]}/distribute_setup.py" do
   source "http://python-distribute.org/distribute_setup.py"
   mode "0644"
-  not_if { ::File.exists?("#{pip_bindir}/pip") }
+  not_if { ::File.exists?(pip_binary) }
 end
 
-bash "install-pip" do
+execute "install-pip" do
   cwd Chef::Config[:file_cache_path]
-  code <<-EOF
-  #{python_bindir}/python distribute_setup.py
-  #{pip_bindir}/easy_install pip
+  command <<-EOF
+  #{node['python']['binary']} distribute_setup.py
+  #{::File.dirname(pip_binary)}/easy_install pip
   EOF
-  not_if { ::File.exists?("#{pip_bindir}/pip") }
+  not_if { ::File.exists?(pip_binary) }
 end

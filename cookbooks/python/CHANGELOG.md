@@ -1,3 +1,20 @@
+## v1.2.2:
+
+* [COOK-2297] - more gracefully handle pip packages from VCS and
+  source archives
+
+## v1.2.0:
+
+* [COOK-1866] - /usr/bin is not a pip binary location in source
+  installs on RHEL
+* [COOK-1925] - add smartos support
+
+## v1.1.0:
+
+* [COOK-1715] - Add user and group to python_pip
+* [COOK-1727] - Python cookbook cannot install `pip` on CentOS
+  versions < 6
+
 ## v1.0.8:
 
 * [COOK-1016] - python package needs separate names for centos/rhel 5.x vs 6.x
