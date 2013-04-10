@@ -24,7 +24,6 @@
     "recipe[sudo]",
     "recipe[htop]",
     "recipe[timezone]",
-    "recipe[supervisor]",
     "recipe[screen]",
     "recipe[users::sysadmins]"
   ],
