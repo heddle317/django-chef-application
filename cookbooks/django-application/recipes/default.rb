@@ -14,7 +14,9 @@
 #     action :create
 # end
 
-python_pip "Django" do
+# install Django 1.5.1
+python_pip "django" do
+    version "1.5.1"
     action :install
 end
 
