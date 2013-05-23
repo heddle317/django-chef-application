@@ -15,8 +15,8 @@
 # end
 
 # install Django 1.5.1
-python_pip "django" do
-    version "1.5.1"
+python_pip "Django" do
+    version "1.5"
     action :install
 end
 
@@ -25,6 +25,22 @@ python_pip "simplejson" do
 end
 
 python_pip "pytz" do
+    action :install
+end
+
+python_pip "django-registration" do
+    action :install
+end
+
+python_pip "django-social-auth" do
+    action :install
+end
+
+python_pip "PIL" do
+    action :install
+end
+
+python_pip "easy-thumbnails" do
     action :install
 end
 
@@ -46,4 +62,8 @@ packages.each do |pkg|
     package pkg do
         action [:install, :upgrade]
     end
+end
+
+python_pip 'django_evolution' do
+    action :install
 end
