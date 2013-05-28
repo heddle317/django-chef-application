@@ -6,6 +6,8 @@
     "uid": 1000,
     "shell": "\/bin\/bash",
     "comment": "Kate Heddleston",
+    "name": "Kate Heddleston",
+    "email": "kate.heddleston@gmail.com",
     "nagios": {
         "email": "kate.heddleston@gmail.com"
     }
