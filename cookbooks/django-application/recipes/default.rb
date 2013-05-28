@@ -36,6 +36,10 @@ python_pip "django-social-auth" do
     action :install
 end
 
+python_pip "tweepy" do
+    action :install
+end
+
 python_pip "PIL" do
     action :install
 end
