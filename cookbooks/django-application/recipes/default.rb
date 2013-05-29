@@ -28,10 +28,6 @@ python_pip "pytz" do
     action :install
 end
 
-python_pip "django-registration" do
-    action :install
-end
-
 python_pip "django-social-auth" do
     action :install
 end
@@ -71,3 +67,5 @@ end
 python_pip 'django_evolution' do
     action :install
 end
+
+include_recipe 'django-application::custom_installations'

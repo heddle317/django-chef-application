@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 action :install do
-    search("#{new_resource.data_bag}", "groups:#{new_resource.search_group} NOT action:remove") do |u|
+    search("#{new_resource.data_bag}", "groups:#{new_resource.search_group}") do |u|
         # Set home to location in data bag,
         # or a reasonable default (/home/$user).
         if u['home']
