@@ -17,15 +17,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-case platform
+case node['platform_family']
 when 'windows'
-  set[:git][:version] = "1.7.9-preview20120201"
-  set[:git][:url] = "http://msysgit.googlecode.com/files/Git-#{node[:git][:version]}.exe"
-  set[:git][:checksum] = "0627394709375140d1e54e923983d259a60f9d8e"
+  default['git']['version'] = "1.8.1.2-preview20130201"
+  default['git']['url'] = "https://msysgit.googlecode.com/files/Git-#{node['git']['version']}.exe"
+  default['git']['checksum'] = "796ac91f0c7456b53f2717a81f475075cc581af2f447573131013cac5b63bb2a"
+  default['git']['display_name'] = "Git version #{ node['git']['version'] }"
 when "mac_os_x"
-  default[:git][:osx_dmg][:app_name]    = "git-1.7.9.4-intel-universal-snow-leopard"
-  default[:git][:osx_dmg][:volumes_dir] = "Git 1.7.9.4 Snow Leopard Intel Universal"
-  default[:git][:osx_dmg][:package_id]  = "GitOSX.Installer.git1794.git.pkg"
-  default[:git][:osx_dmg][:url]         = "http://git-osx-installer.googlecode.com/files/git-1.7.9.4-intel-universal-snow-leopard.dmg"
-  default[:git][:osx_dmg][:checksum]    = "661c3fcf765572d3978df17c7636d59e"
+  default['git']['osx_dmg']['app_name']    = "git-1.8.2-intel-universal-snow-leopard"
+  default['git']['osx_dmg']['volumes_dir'] = "Git 1.8.2 Snow Leopard Intel Universal"
+  default['git']['osx_dmg']['package_id']  = "GitOSX.Installer.git182.git.pkg"
+  default['git']['osx_dmg']['url']         = "https://git-osx-installer.googlecode.com/files/git-1.8.2-intel-universal-snow-leopard.dmg"
+  default['git']['osx_dmg']['checksum']    = "e1d0ec7a9d9d03b9e61f93652b63505137f31217908635cdf2f350d07cb33e15"
+else
+  default['git']['prefix'] = "/usr/local"
+  default['git']['version'] = "1.8.2.1"
+  default['git']['url'] = "https://nodeload.github.com/git/git/tar.gz/v#{node['git']['version']}"
+  default['git']['checksum'] = "bdc1768f70ce3d8f3e4edcdcd99b2f85a7f8733fb684398aebe58dde3e6bcca2"
 end
+
+default['git']['server']['base_path'] = "/srv/git"
+default['git']['server']['export_all'] = "true"

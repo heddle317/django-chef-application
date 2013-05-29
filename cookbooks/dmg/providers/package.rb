@@ -51,7 +51,9 @@ action :install do
 
     case new_resource.type
     when "app"
-      execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
+      execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'" do
+        user new_resource.owner if new_resource.owner
+      end
 
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
@@ -68,6 +70,13 @@ end
 private
 
 def installed?
-  ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app") ||
-    system("pkgutil --pkgs=#{new_resource.package_id}")
+  if ( ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app") )
+    Chef::Log.info "Already installed; to upgrade, remove \"#{new_resource.destination}/#{new_resource.app}.app\""
+    true
+  elsif ( system("pkgutil --pkgs=#{new_resource.package_id}") )
+    Chef::Log.info "Already installed; to upgrade, try \"sudo pkgutil --forget #{new_resource.package_id}\""
+    true
+  else
+    false
+  end
 end

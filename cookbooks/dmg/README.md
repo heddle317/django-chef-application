@@ -30,6 +30,7 @@ Optionally, the LWRP can install an "mpkg" or "pkg" package using installer(8).
 
 * `app` - This is the name of the application used by default for the /Volumes directory and the .app directory copied to /Applications.
 * `source` - remote URL for the dmg to download if specified. Default is nil.
+* `owner` - owner that should own the package installation.
 * `destination` - directory to copy the .app into. Default is /Applications.
 * `checksum` - sha256 checksum of the dmg to download. Default is nil.
 * `type` - type of package, "app", "pkg" or "mpkg". Default is "app". When using "pkg" or "mpkg", the destination must be /Applications.
