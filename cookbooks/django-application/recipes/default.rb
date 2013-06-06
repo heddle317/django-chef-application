@@ -68,4 +68,24 @@ python_pip 'django_evolution' do
     action :install
 end
 
+python_pip 'rq' do
+    action :install
+end
+
+python_pip 'rq-dashboard' do
+    action :install
+end
+
+python_pip 'rq-scheduler' do
+    action :install
+end
+
+python_pip 'django-rq' do
+    action :install
+end
+
+python_pip 'django-redis' do
+    action :install
+end
+
 include_recipe 'django-application::custom_installations'
