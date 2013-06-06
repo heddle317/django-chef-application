@@ -88,4 +88,12 @@ python_pip 'django-redis' do
     action :install
 end
 
+python_pip 'python-linkedin' do
+    action :install
+end
+
+python_pip 'requests' do
+    action :install
+end
+
 include_recipe 'django-application::custom_installations'
