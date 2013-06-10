@@ -108,4 +108,8 @@ python_pip 'requests_oauthlib' do
     action :install
 end
 
+python_pip "django-supervisor" do
+    action :install
+end
+
 include_recipe 'django-application::custom_installations'
