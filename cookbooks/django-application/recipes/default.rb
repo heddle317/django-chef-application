@@ -112,4 +112,8 @@ python_pip "django-supervisor" do
     action :install
 end
 
+python_pip "indeed" do
+    action :install
+end
+
 include_recipe 'django-application::custom_installations'
