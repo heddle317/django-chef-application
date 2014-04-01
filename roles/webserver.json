@@ -9,7 +9,6 @@
   "chef_type": "role",
   "run_list": [
     "role[base]",
-    "recipe[gunicorn]",
     "recipe[nginx]",
     "recipe[django-application]",
     "recipe[redis]",
