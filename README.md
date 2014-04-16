@@ -6,7 +6,7 @@ This code repository is a starter code base for creating a server with python, D
 Getting Started with Chef
 =========================
 
-https://learnchef.opscode.com/quickstart/workstation-setup/
+https://learnchef.opscode.com/set-up-your-chef-environment/
 
 Getting Started with your knife plugin
 ======================================
